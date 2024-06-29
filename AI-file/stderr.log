@@ -1,0 +1,802 @@
+Traceback (most recent call last):
+  File "/home/optifisc/app_app/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/alt/python311/lib64/python3.11/imp.py", line 172, in load_source
+    module = _load(spec)
+             ^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 721, in _load
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 1, in <module>
+    from flask import Flask, request, jsonify
+ModuleNotFoundError: No module named 'flask'
+Traceback (most recent call last):
+  File "/home/optifisc/app_app/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/alt/python311/lib64/python3.11/imp.py", line 172, in load_source
+    module = _load(spec)
+             ^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 721, in _load
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 1, in <module>
+    from flask import Flask, request, jsonify
+ModuleNotFoundError: No module named 'flask'
+Traceback (most recent call last):
+  File "/home/optifisc/app_app/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/alt/python311/lib64/python3.11/imp.py", line 172, in load_source
+    module = _load(spec)
+             ^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 721, in _load
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 1, in <module>
+    from flask import Flask, request, jsonify
+ModuleNotFoundError: No module named 'flask'
+[2024-05-29 16:59:34,787] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 84, in __load
+    root = nltk.data.find(f"{self.subdir}/{zip_name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mstopwords[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('stopwords')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/stopwords.zip/stopwords/[0m
+
+  Searched in:
+    - '/home/optifisc/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/share/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 878, in update_top_candidates_data
+    response = top_candidates_endpoint()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 822, in top_candidates_endpoint
+    match_score =float(find_score(job_description, bio + " " + skills, skills))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 181, in find_score
+    resume = preprocess_text(resume)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 173, in preprocess_text
+    stop_words = set(stopwords.words('english'))
+                     ^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 121, in __getattr__
+    self.__load()
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 86, in __load
+    raise e
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 81, in __load
+    root = nltk.data.find(f"{self.subdir}/{self.__name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mstopwords[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('stopwords')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/stopwords[0m
+
+  Searched in:
+    - '/home/optifisc/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/share/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+[2024-05-29 17:00:58,468] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 84, in __load
+    root = nltk.data.find(f"{self.subdir}/{zip_name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mstopwords[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('stopwords')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/stopwords.zip/stopwords/[0m
+
+  Searched in:
+    - '/home/optifisc/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/share/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 878, in update_top_candidates_data
+    response = top_candidates_endpoint()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 822, in top_candidates_endpoint
+    match_score =float(find_score(job_description, bio + " " + skills, skills))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 181, in find_score
+    resume = preprocess_text(resume)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 173, in preprocess_text
+    stop_words = set(stopwords.words('english'))
+                     ^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 121, in __getattr__
+    self.__load()
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 86, in __load
+    raise e
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 81, in __load
+    root = nltk.data.find(f"{self.subdir}/{self.__name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mstopwords[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('stopwords')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/stopwords[0m
+
+  Searched in:
+    - '/home/optifisc/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/share/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+[2024-05-29 17:01:51,242] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 84, in __load
+    root = nltk.data.find(f"{self.subdir}/{zip_name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mstopwords[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('stopwords')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/stopwords.zip/stopwords/[0m
+
+  Searched in:
+    - '/home/optifisc/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/share/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 878, in update_top_candidates_data
+    response = top_candidates_endpoint()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 822, in top_candidates_endpoint
+    match_score =float(find_score(job_description, bio + " " + skills, skills))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 181, in find_score
+    resume = preprocess_text(resume)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 173, in preprocess_text
+    stop_words = set(stopwords.words('english'))
+                     ^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 121, in __getattr__
+    self.__load()
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 86, in __load
+    raise e
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 81, in __load
+    root = nltk.data.find(f"{self.subdir}/{self.__name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mstopwords[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('stopwords')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/stopwords[0m
+
+  Searched in:
+    - '/home/optifisc/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/share/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+[2024-05-29 17:04:56,048] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 84, in __load
+    root = nltk.data.find(f"{self.subdir}/{zip_name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mstopwords[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('stopwords')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/stopwords.zip/stopwords/[0m
+
+  Searched in:
+    - '/home/optifisc/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/share/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 878, in update_top_candidates_data
+    response = top_candidates_endpoint()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 822, in top_candidates_endpoint
+    match_score =float(find_score(job_description, bio + " " + skills, skills))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 181, in find_score
+    resume = preprocess_text(resume)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 173, in preprocess_text
+    stop_words = set(stopwords.words('english'))
+                     ^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 121, in __getattr__
+    self.__load()
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 86, in __load
+    raise e
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 81, in __load
+    root = nltk.data.find(f"{self.subdir}/{self.__name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mstopwords[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('stopwords')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/stopwords[0m
+
+  Searched in:
+    - '/home/optifisc/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/share/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+[2024-05-29 17:06:31,037] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 84, in __load
+    root = nltk.data.find(f"{self.subdir}/{zip_name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mstopwords[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('stopwords')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/stopwords.zip/stopwords/[0m
+
+  Searched in:
+    - '/home/optifisc/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/share/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 878, in update_top_candidates_data
+    response = top_candidates_endpoint()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 822, in top_candidates_endpoint
+    match_score =float(find_score(job_description, bio + " " + skills, skills))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 181, in find_score
+    resume = preprocess_text(resume)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "app.py", line 173, in preprocess_text
+    stop_words = set(stopwords.words('english'))
+                     ^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 121, in __getattr__
+    self.__load()
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 86, in __load
+    raise e
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/corpus/util.py", line 81, in __load
+    root = nltk.data.find(f"{self.subdir}/{self.__name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/nltk/data.py", line 583, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mstopwords[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('stopwords')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/stopwords[0m
+
+  Searched in:
+    - '/home/optifisc/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/share/nltk_data'
+    - '/home/optifisc/virtualenv/app_app/3.11/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+[2024-05-29 17:07:51,534] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1211, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a int.
+[2024-05-29 17:09:06,180] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1211, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a int.
+[2024-05-29 17:10:19,052] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1211, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a int.
+[2024-05-29 17:11:13,422] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1211, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a int.
+[2024-05-29 17:12:54,478] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1211, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a int.
+[2024-05-29 17:13:46,227] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1211, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a int.
+[2024-05-29 17:15:05,120] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1211, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a int.
+[2024-05-29 17:15:13,412] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1211, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a int.
+[2024-05-29 17:16:10,353] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1211, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a int.
+[2024-05-29 17:19:32,543] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1211, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a int.
+[2024-05-29 17:20:24,437] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1211, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a int.
+[2024-05-29 17:20:41,638] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1211, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a int.
+[2024-05-29 17:20:52,743] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1211, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a int.
+[2024-05-29 17:23:01,862] ERROR in app: Exception on /update-top-candidates-data [GET]
+Traceback (most recent call last):
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/optifisc/virtualenv/app_app/3.11/lib/python3.11/site-packages/flask/app.py", line 1211, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a int.
+MySQL Connected...
+[UID:706][3395934] Child process with pid: 3396032 was killed by signal: 15, core dumped: no
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...
+MySQL Connected...

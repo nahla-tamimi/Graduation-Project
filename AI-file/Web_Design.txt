@@ -1,0 +1,9 @@
+Degree in Web Design, Graphic Design, Computer Science or a related field.
+Proficiency in design tools such as Adobe Creative Suite, Sketch, or Figma.
+Strong understanding of UI/UX principles.
+Knowledge of HTML, CSS, and JavaScript for front-end development.
+Knowledge of one of these frameworks: Node.js, React.js, Laravel, web2py, ASP.NET.
+Portfolio showcasing previous web design projects.
+Knowledge in Web Technologies such as Angular JS, HTML5, CSS3, SASS, Bootstrap, jQuery, JavaScript. Software: Brackets, Visual Studio, Photoshop, Visual Studio Code Education Details
+
+

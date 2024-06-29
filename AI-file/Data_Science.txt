@@ -1,0 +1,6 @@
+Degree in Statistics, Computer Science, Data Science or a related field.
+Proficiency in programming languages like Python, SQL.
+Experience in machine learning, data analysis, and statistical modeling.
+Strong knowledge of data visualization tools and techniques, such as MySQL, SQL Server, Cassandra, HBase, matplotlib, Tableau.
+knowledge in Machine learning: Regression, SVM, KNN, Random Forest, Decision Trees, boosting techniques, Cluster Analysis, Word Embedding, Sentiment Analysis, Natural Language processing, Dimensionality reduction, Topic Modelling (LDA, NMF), PCA & Neural Nets.
+Ability to interpret and communicate insights from complex data sets

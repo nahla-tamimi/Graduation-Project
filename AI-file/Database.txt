@@ -1,0 +1,7 @@
+Degree in Computer Science, Information Technology, Computer Engineering or a related field.
+Experience with database management systems (DBMS) like MySQL, Oracle, or Microsoft SQL Server.
+Knowledge of database design, normalization, and optimization.
+Skills in database security and data integrity.
+Proficiency in SQL (Structured Query Language).
+Ability to troubleshoot and resolve database issues.
+Familiarity with backup and recovery procedures.

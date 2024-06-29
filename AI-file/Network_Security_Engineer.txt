@@ -1,0 +1,5 @@
+Degree in Computer Engineering, Cybersecurity, or a related field.
+Hands-on experience in designing and implementing secure networks.
+Knowledge of firewall and intrusion detection/prevention systems.
+Familiarity with security protocols and encryption techniques.
+Certifications such as CISSP (Certified Information Systems Security Professional) or CompTIA Security+.
